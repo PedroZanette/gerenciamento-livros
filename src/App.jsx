@@ -139,10 +139,15 @@ function App() {
             
             {/* Botão de atualização */}
             <button
+
               onClick={() =>
                 handleUpdate(veiculo.id, {
                   ...veiculo,
-                  modelo: 'Novo Modelo Atualizado', // Exemplo de atualização
+                  isbn: novoVeiculo.isbn !== "" ? novoVeiculo.isbn : veiculo.isbn,
+                  autor: novoVeiculo.autor !== "" ? novoVeiculo.autor : veiculo.autor,
+                  titulo: novoVeiculo.titulo !== "" ? novoVeiculo.titulo : veiculo.titulo,
+                  editora: novoVeiculo.editora !== "" ? novoVeiculo.editora : veiculo.editora,
+                  genero: novoVeiculo.genero !== "" ? novoVeiculo.genero : veiculo.genero,
                 })
               }
             >
